@@ -19,7 +19,7 @@ public class MailController {
 
     @PostMapping(value = "")
     public String sendMail(@RequestParam("email") String email, @RequestParam("subject") String subject, @RequestParam("message") String message){
-        mailService.sendSimpleMessage(email, subject, message);
+        mailService.sendSimpleMessage("phanhaingan@gmail.com", subject, message);
         return "contact";
     }
 }
