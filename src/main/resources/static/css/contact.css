@@ -1,0 +1,96 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "gilroymedium";
+  font-size: 1rem;
+}
+
+body {
+  background-color: #212221;
+  color: white;
+}
+/*
+* Navbar
+*/
+.p-3 {
+  padding: 0 !important;
+}
+
+.bg-dark {
+  background-color: #171717 !important;
+}
+
+.navbar {
+  z-index: 1;
+}
+
+#navbrand {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-link {
+  margin-left: 1.5em;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+/*
+   * Cover
+   */
+.cover {
+  padding: 0 1.5rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon:hover {
+  opacity: 0.4;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #a3a3a3;
+}
+
+.navbar-dark .navbar-nav .about-me {
+  color: #028af2;
+}
+
+/*
+* Navbar
+*/
+
+/*
+* Main
+*/
+
+.container {
+  margin-top: 5rem;
+}
+
+.intro {
+  margin-bottom: 3rem;
+}
+
+.btn {
+  border-radius: 20px;
+  width: 8rem;
+  background-color: #028af2;
+  margin-bottom: 2rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  border-radius: 20px;
+}
+
+
+#inputMessage {
+  border-radius: 10px;
+}
