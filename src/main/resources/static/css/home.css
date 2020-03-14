@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'gilroymedium';
+  src: url('../fonts/gilroy-medium1_0-webfont.woff2') format('woff2'),
+  url('../fonts/gilroy-medium1_0-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 html,
 body {
   margin: 0;
