@@ -3,6 +3,7 @@ package com.sonriceart.portfolio.controller;
 import com.sonriceart.portfolio.service.MailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,10 +20,10 @@ public class MailController {
     }
 
     @PostMapping(value = "")
-    public String sendMail(RedirectAttributes redirectAttributes, @RequestParam("email") String email, @RequestParam("subject") String subject, @RequestParam("message") String message){
-        mailService.sendSimpleMessage("phanhaingan@gmail.com", subject, message);
-        //mailService.sendSimpleMessage("minhquan.nguyen.fr@gmail.com", subject, message);
-        redirectAttributes.addFlashAttribute("flash","You have successfully send the message");
-        return "redirect:/contact";
+    public String sendMail(Model model, @RequestParam("email") String email, @RequestParam("subject") String subject, @RequestParam("message") String message){
+        //mailService.sendSimpleMessage("phanhaingan@gmail.com", subject, message);
+        mailService.sendSimpleMessage("minhquan.nguyen.fr@gmail.com", subject, message);
+        model.addAttribute("flash","You have successfully send the message");
+        return "contact";
     }
 }
