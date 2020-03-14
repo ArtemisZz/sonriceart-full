@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'gilroymedium';
-  src: url('../fonts/gilroy-medium1_0-webfont.woff2') format('woff2'),
-  url('../fonts/gilroy-medium1_0-webfont.woff') format('woff');
+  src: url('https://res.cloudinary.com/dnndch4fo/raw/upload/v1584189291/gilroy-medium1_0-webfont_corzdq.woff2') format('woff2'),
+  url('https://res.cloudinary.com/dnndch4fo/raw/upload/v1584189291/gilroy-medium1_0-webfont_d8oq9g.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
+
 html,
 body {
   margin: 0;
   height: 100%;
-  font-family: "gilroymedium";
+  font-family: "gilroymedium", serif;
   font-size: 1rem;
 }
 body {
