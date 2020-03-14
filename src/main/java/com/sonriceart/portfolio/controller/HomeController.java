@@ -8,11 +8,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
+    /**
+     * Direct to the home page
+     * @return name of the home page in thymeleaf
+     */
     @GetMapping("/")
     public String home(){
         return "home";
     }
 
+    /**
+     * Go to contact form
+     * @return name of the contact page in thymeleaf
+     */
     @RequestMapping(value = "/contact")
     public String contact(){
         return "contact";

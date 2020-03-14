@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/mail")
@@ -18,8 +19,10 @@ public class MailController {
     }
 
     @PostMapping(value = "")
-    public String sendMail(@RequestParam("email") String email, @RequestParam("subject") String subject, @RequestParam("message") String message){
-        mailService.sendSimpleMessage("phanhaingan@gmail.com", subject, message);
-        return "contact";
+    public String sendMail(RedirectAttributes redirectAttributes, @RequestParam("email") String email, @RequestParam("subject") String subject, @RequestParam("message") String message){
+        //mailService.sendSimpleMessage("phanhaingan@gmail.com", subject, message);
+        mailService.sendSimpleMessage("minhquan.nguyen.fr@gmail.com", subject, message);
+        redirectAttributes.addFlashAttribute("flash","You have successfully send the message");
+        return "redirect:/contact";
     }
 }

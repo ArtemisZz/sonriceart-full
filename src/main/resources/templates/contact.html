@@ -1,130 +1,149 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="images/Logo invert.png">
+    <title>Contact Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="fonts/stylesheet.css" />
-    <link rel="stylesheet" href="css/contact.css" />
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="fonts/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="css/contact.css"/>
 </head>
 
 <body>
-    <div class="cover-container d-flex w-100 p-auto mx-auto flex-column">
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" th:href="@{/}">
-                <img id="navbrand" class="logo" src="images/Full logo white.png" alt="Full logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link about-me" href="#">ABOUT ME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ILLUSTRATION</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">GAME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">FILM</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">3D ART</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.artstation.com%2Fsonrice%3Ffbclid%3DIwAR3GxU-1iA5w3a3Lh_yQnzBgQr1O1ebPkFMk9x4v5qsmslKrBOVpm7rMk5U&h=AT0XfmJLS6N-6D16EzQh9PyTePQKJ-JRV6bPSrHpc8zJfeA-zYil557fh2DkKJE9RK52mslac6I2W2dTDiijA04BxYZux4PiSCX3SrVdzlVRmM4ci6OwsUqBu6knDxL0X43G1w">
-                            <img src="images/artstation.png" class="icon" />
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.facebook.com/Sonriceart/">
-                            <img src="images/fb.png" class="icon" />
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="https://www.instagram.com/son.rice.art/?fbclid=IwAR1m6d1g3GxShyHJBvErW6kAucjbDvdJU-ytePO5qm0cWMVGZ_AFPj7w5ms">
-                            <img src="images/insta.png" class="icon" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+<div class="cover-container d-flex w-100 p-auto mx-auto flex-column">
     <!--Navbar-->
-    <!--Main-->
-    <div class="container w-100 h-100 p-auto d-flex flex-column">
-        <main role="main">
-            <!--Contact form-->
-            <form action="#" th:action="@{/mail}" method="POST">
-                <fieldset>
-                    <div class="intro">
-                        <legend>Thank you for all the emails and questions!</legend>
-                        <p>Fill out this form and I will get back to you as soon as possible. Thank you!</p>
-                    </div>
-                    <p>* Commisions and Jobs are OPEN</p>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputFirstName">Name *</label>
-                            <input type="text" class="form-control" id="inputFirstName" name="firstName" placeholder="First Name"
-                                required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputLastName" style="color: #212221;">Lastname</label>
-                            <input type="text" class="form-control" id="inputLastName" name="lastName" placeholder="Last Name" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail">Email *</label>
-                            <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label for="inputPhone">Phone</label>
-                            <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="Phone">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputSubject">Subject *</label>
-                            <input type="text" class="form-control" id="inputSubject" name="subject" placeholder="*Subject" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label for="inputMessage">Message *</label>
-                            <textarea class="form-control" id="inputMessage" placeholder="Enter your message here"
-                                rows="4" required name="message"></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">SUBMIT</button>
-                </fieldset>
-            </form>
-            <!--Contact form-->
-        </main>
-    </div>
-    <!--Main-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" th:href="@{/}">
+            <img id="navbrand" class="logo" src="images/Full logo white.png" alt="Full logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link about-me" href="#">ABOUT ME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ILLUSTRATION</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">GAME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FILM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">3D ART</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.artstation.com%2Fsonrice%3Ffbclid%3DIwAR3GxU-1iA5w3a3Lh_yQnzBgQr1O1ebPkFMk9x4v5qsmslKrBOVpm7rMk5U&h=AT0XfmJLS6N-6D16EzQh9PyTePQKJ-JRV6bPSrHpc8zJfeA-zYil557fh2DkKJE9RK52mslac6I2W2dTDiijA04BxYZux4PiSCX3SrVdzlVRmM4ci6OwsUqBu6knDxL0X43G1w">
+                        <img src="images/artstation.png" class="icon"/>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/Sonriceart/">
+                        <img src="images/fb.png" class="icon"/>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="https://www.instagram.com/son.rice.art/?fbclid=IwAR1m6d1g3GxShyHJBvErW6kAucjbDvdJU-ytePO5qm0cWMVGZ_AFPj7w5ms">
+                        <img src="images/insta.png" class="icon"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!--Navbar-->
+<!--Main-->
 
-    </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+<div class="container w-100 h-100 p-auto d-flex flex-column">
+    <main role="main">
+        <!--/*@thymesVar id="flash" type="java.lang.String"*/-->
+        <div th:if="${flash}">
+            <div class="alert alert-success" role="alert" id="flash">
+                <p th:text="${flash}">
+
+                </p>
+            </div>
+        </div>
+        <!--Contact form-->
+        <form action="#" th:action="@{/mail}" method="POST">
+            <fieldset>
+                <div class="intro">
+                    <legend>Thank you for all the emails and questions!</legend>
+                    <p>Fill out this form and I will get back to you as soon as possible. Thank you!</p>
+                </div>
+                <p>* Commisions and Jobs are OPEN</p>
+                <div class="form-row">
+                    <input
+                            type="hidden"
+                            th:name="${_csrf.parameterName}"
+                            th:value="${_csrf.token}"/>
+                    <div class="form-group col-md-6">
+                        <label for="inputFirstName">Name *</label>
+                        <input type="text" class="form-control" id="inputFirstName" name="firstName"
+                               placeholder="First Name"
+                               required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputLastName" style="color: #212221;">Lastname</label>
+                        <input type="text" class="form-control" id="inputLastName" name="lastName"
+                               placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail">Email *</label>
+                        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email"
+                               required>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputPhone">Phone</label>
+                        <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputSubject">Subject *</label>
+                        <input type="text" class="form-control" id="inputSubject" name="subject" placeholder="*Subject"
+                               required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputMessage">Message *</label>
+                        <textarea class="form-control" id="inputMessage" placeholder="Enter your message here"
+                                  rows="4" required name="message"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+            </fieldset>
+        </form>
+        <!--Contact form-->
+    </main>
+    <!--Main-->
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
         crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script th:src="@{js/contact.js}" type="text/javascript"></script>
 </body>
 
 </html>
