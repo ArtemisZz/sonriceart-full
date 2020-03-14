@@ -20,8 +20,8 @@ public class MailController {
 
     @PostMapping(value = "")
     public String sendMail(RedirectAttributes redirectAttributes, @RequestParam("email") String email, @RequestParam("subject") String subject, @RequestParam("message") String message){
-        //mailService.sendSimpleMessage("phanhaingan@gmail.com", subject, message);
-        mailService.sendSimpleMessage("minhquan.nguyen.fr@gmail.com", subject, message);
+        mailService.sendSimpleMessage("phanhaingan@gmail.com", subject, message);
+        //mailService.sendSimpleMessage("minhquan.nguyen.fr@gmail.com", subject, message);
         redirectAttributes.addFlashAttribute("flash","You have successfully send the message");
         return "redirect:/contact";
     }
