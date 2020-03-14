@@ -11,6 +11,6 @@ public class AdminController {
     @GetMapping(value = {"","/"})
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String editProfile(){
-        return "edit";
+        return "home";
     }
 }
