@@ -1,11 +1,9 @@
 @font-face {
   font-family: 'gilroymedium';
-  src: url('https://res.cloudinary.com/dnndch4fo/raw/upload/v1584189291/gilroy-medium1_0-webfont_corzdq.woff2') format('woff2'),
-  url('https://res.cloudinary.com/dnndch4fo/raw/upload/v1584189291/gilroy-medium1_0-webfont_d8oq9g.woff') format('woff');
+  src: url('https://res.cloudinary.com/dnndch4fo/raw/upload/v1584189291/gilroy-medium1_0-webfont_corzdq.woff2') format('woff2'), url('https://res.cloudinary.com/dnndch4fo/raw/upload/v1584189291/gilroy-medium1_0-webfont_d8oq9g.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-
 html,
 body {
   margin: 0;
@@ -14,7 +12,7 @@ body {
   font-size: 1rem;
 }
 body {
-  background: url("https://res.cloudinary.com/dnndch4fo/image/upload/v1584207541/cafefinal_1_feymfc.webp") no-repeat center center fixed;
+  background: url('https://res.cloudinary.com/dnndch4fo/image/upload/v1584207541/cafefinal_1_feymfc.webp') no-repeat center center fixed;
   background-size: cover;
   color: white;
 }

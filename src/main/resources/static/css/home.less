@@ -1,20 +1,26 @@
+@font-face {
+  font-family: 'gilroymedium';
+  src: url('https://res.cloudinary.com/dnndch4fo/raw/upload/v1584189291/gilroy-medium1_0-webfont_corzdq.woff2') format('woff2'),
+  url('https://res.cloudinary.com/dnndch4fo/raw/upload/v1584189291/gilroy-medium1_0-webfont_d8oq9g.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   margin: 0;
   height: 100%;
-  font-family: "gilroymedium";
+  font-family: "gilroymedium", serif;
   font-size: 1rem;
 }
-
 body {
-  background: url("https://res.cloudinary.com/dnndch4fo/image/upload/v1584188963/cafe_final_jalfzb.jpg") no-repeat center center fixed;
+  background: url('https://res.cloudinary.com/dnndch4fo/image/upload/v1584207541/cafefinal_1_feymfc.webp') no-repeat center center fixed;
   background-size: cover;
   color: white;
 }
-
 .bg {
-  background: rgb(70, 70, 70);
-  background: linear-gradient(180deg, rgba(70, 70, 70, 1) 0%, rgba(23, 23, 23, 1) 30%, rgba(0, 0, 0, 1) 100%);
+  background: #464646;
+  background: linear-gradient(180deg, #464646 0%, #171717 30%, #000000 100%);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -22,70 +28,56 @@ body {
   z-index: -1;
 }
 /* Navbar */
-
 .p-3 {
   padding: 0 !important;
 }
-
 .bg-dark {
   background-color: #171717 !important;
 }
-
 .navbar {
   z-index: 1;
 }
-
 #navbrand {
   width: 40px;
   height: 40px;
 }
-
 .nav-link {
   margin-left: 1.5em;
 }
-
 .navbar-dark .navbar-nav .nav-link {
   color: white;
 }
-
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #a3a3a3;
 }
-
 .navbar-dark .navbar-nav .about-me {
   color: #028af2;
 }
-
 .icon {
   width: 20px;
   height: 20px;
 }
-
 .icon:hover {
   opacity: 0.4;
 }
 /* Navbar */
-
 /*
  * Cover
  */
 .cover {
   padding: 0 1.5rem;
 }
-
 /* Main */
 .intro {
   margin-left: 1em;
   margin-right: 1em;
 }
-
 #ava2 {
   border-radius: 50%;
   width: 150px;
   height: 150px;
   margin-bottom: 1em;
 }
-
 .btn {
   border-radius: 20px;
   width: 150px;
