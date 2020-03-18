@@ -1,15 +1,9 @@
 package com.sonriceart.portfolio.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
-
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
-import java.io.File;
 
 @Service
 public class MailServiceImpl implements MailService{
@@ -30,6 +24,7 @@ public class MailServiceImpl implements MailService{
         mailSender.send(message);
     }
 
+    /*
     @Override
     public void sendMessageWithAttachment(
             String to, String subject, String text, String pathToAttachment) {
@@ -49,4 +44,5 @@ public class MailServiceImpl implements MailService{
             e.printStackTrace();
         }
     }
+    */
 }

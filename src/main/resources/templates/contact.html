@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dnndch4fo/image/upload/v1584188962/Logo_invert_vu32ch.png">
+    <link rel="icon" type="image/x-icon"
+          href="https://citopoto.sirv.com/Images/sonrice/Logoinvert1.webp">
     <title>Contact Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/contact.css"/>
+    <link rel="stylesheet" type="text/css" href="css/contact.min.css"/>
 </head>
-
 <body>
 <div class="cover-container d-flex w-100 p-auto mx-auto flex-column">
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-auto">
         <a class="navbar-brand" th:href="@{/}">
-            <img id="navbrand" class="logo" src="https://res.cloudinary.com/dnndch4fo/image/upload/v1584188962/Full_logo_white_h6xwn5.png" alt="Full logo">
+            <img id="navbrand" class="logo" src="https://citopoto.sirv.com/Images/sonrice/Fulllogowhite(1).webp"
+                 alt="Full logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,6 +25,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')">
+                    <a class="nav-link about-me" href="#">EDIT PROFILE</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link about-me" href="#">ABOUT ME</a>
                 </li>
@@ -41,25 +46,25 @@
                 <li class="nav-item">
                     <a class="nav-link"
                        href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.artstation.com%2Fsonrice%3Ffbclid%3DIwAR3GxU-1iA5w3a3Lh_yQnzBgQr1O1ebPkFMk9x4v5qsmslKrBOVpm7rMk5U&h=AT0XfmJLS6N-6D16EzQh9PyTePQKJ-JRV6bPSrHpc8zJfeA-zYil557fh2DkKJE9RK52mslac6I2W2dTDiijA04BxYZux4PiSCX3SrVdzlVRmM4ci6OwsUqBu6knDxL0X43G1w">
-                        <img src="https://res.cloudinary.com/dnndch4fo/image/upload/v1584194464/artstation_k6cihv.png" class="icon"/>
+                        <img src="https://citopoto.sirv.com/Images/sonrice/artstation(2).webp" class="icon"/>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.facebook.com/Sonriceart/">
-                        <img src="https://res.cloudinary.com/dnndch4fo/image/upload/v1584194465/fb_nsj9di.png" class="icon"/>
+                        <img src="https://citopoto.sirv.com/Images/sonrice/fb(2).webp" class="icon"/>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link"
                        href="https://www.instagram.com/son.rice.art/?fbclid=IwAR1m6d1g3GxShyHJBvErW6kAucjbDvdJU-ytePO5qm0cWMVGZ_AFPj7w5ms">
-                        <img src="https://res.cloudinary.com/dnndch4fo/image/upload/v1584194464/insta_zxv164.png" class="icon"/>
+                        <img src="https://citopoto.sirv.com/Images/sonrice/insta(2).webp" class="icon"/>
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
+    <!--Navbar-->
 </div>
-<!--Navbar-->
 <!--Main-->
 
 <div class="container w-100 h-100 p-auto d-flex flex-column">
@@ -140,7 +145,6 @@
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
 <script th:src="@{js/contact.js}" type="text/javascript"></script>
 </body>
 

@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminController {
     @GetMapping(value = {"","/"})
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public String editProfile(){
+    public String adminMode(){
         return "home";
     }
+
+
 }
